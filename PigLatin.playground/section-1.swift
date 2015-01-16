@@ -15,7 +15,7 @@ var tempIndex = 0
 
 // MARK: Functions
 
-// Step 1
+// STEP 1
 
 func createStringArray() -> [String] {
     var stringArray = [String]()
@@ -27,8 +27,10 @@ func createStringArray() -> [String] {
     return stringArray
 }
 
+createStringArray()
 
-// STEP1 Function: See if first string is a vowel
+
+// STEP 2 Function: See if first string is a vowel
 func firstStringIsAVowel() -> Bool {
     switch createStringArray()[0] {
     case "a","e","i","o","u":
@@ -39,11 +41,14 @@ func firstStringIsAVowel() -> Bool {
     }
 }
 
+firstStringIsAVowel()
+
+
 // STEP 2 Function: extract constants
 func grabInitialConstants() -> (initialConstants: String, restOfStringStartsWith: String) {
     var restOfStringStartsWith: String = ""
     var moveStringToEnd = ""
-    for string in stringArray {
+    for string in createStringArray() {
         switch string {
         case "a","e","i","o","u":
             if moveStringToEnd != "" {
@@ -51,6 +56,7 @@ func grabInitialConstants() -> (initialConstants: String, restOfStringStartsWith
                 break
             }
         case "b","c","d","f","g","h","j","k","l","m","n","p","q","r","s","t","u","v","w","x","y","z":
+            println("test")
             if restOfStringStartsWith == "" {
                 moveStringToEnd += string
             } else {
@@ -63,6 +69,14 @@ func grabInitialConstants() -> (initialConstants: String, restOfStringStartsWith
     return (moveStringToEnd, restOfStringStartsWith)
 }
 
+if !firstStringIsAVowel() {
+    grabInitialConstants()
+}
+
+
+
+
+
 // Function 3: find Index where word should be split
 
 func splitWordAtIndex() -> (Int) {
@@ -72,21 +86,23 @@ func splitWordAtIndex() -> (Int) {
             index += 1
         }
     }
-    return index - 2
+    index
+    return index
 }
-
-createStringArray()
-firstStringIsAVowel()
-if !firstStringIsAVowel() {
-    // Call Function 2
-    grabInitialConstants()
-    // Call Function 3
-    splitWordAtIndex()
-    
-    // Assemble word
-    
-}
-
+//
+//createStringArray()
+//firstStringIsAVowel()
+//if !firstStringIsAVowel() {
+//    // Call Function 2
+//    grabInitialConstants()
+//    // Call Function 3
+//    splitWordAtIndex()
+//    
+//    // Assemble word
+////    testword.substringWithRange(splitWordAtIndex())
+//    
+//}
+//
 
 //testword.substringWithRange(<#aRange: Range<String.Index>#>)
 

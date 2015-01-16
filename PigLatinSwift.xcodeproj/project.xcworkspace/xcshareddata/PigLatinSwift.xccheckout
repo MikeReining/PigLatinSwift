@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>1B0E1137-B1D6-45D4-8D31-788127484E41</string>
+	<key>IDESourceControlProjectName</key>
+	<string>PigLatinSwift</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>B3BB7B7D56C2C883B361A9F104605CDCAB89C43F</key>
+		<string>https://github.com/MikeReining/PigLatinSwift.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>PigLatinSwift.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>B3BB7B7D56C2C883B361A9F104605CDCAB89C43F</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/MikeReining/PigLatinSwift.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>B3BB7B7D56C2C883B361A9F104605CDCAB89C43F</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B3BB7B7D56C2C883B361A9F104605CDCAB89C43F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>PigLatinSwift</string>
+		</dict>
+	</array>
+</dict>
+</plist>
