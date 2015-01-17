@@ -1,5 +1,11 @@
 // Playground - noun: a place where people can play
 
+// PIG LATINIZATION NOTES
+// - currently works only for single words
+
+
+
+
 import Foundation
 
 extension String {
@@ -7,9 +13,10 @@ extension String {
     }
 }
 
-var testword: String = "eeeebg"
-var stringArray = [String]()
-var tempIndex = 0
+var testword: String = "Kale"
+
+var lowercaseString = testword.lowercaseString
+
 
 // Create Array from String
 
@@ -19,7 +26,8 @@ var tempIndex = 0
 
 func createStringArray() -> [String] {
     var stringArray = [String]()
-    for char in testword {
+    var lowercaseString = testword.lowercaseString
+    for char in lowercaseString {
         var charToString = String(char)
         stringArray.append(charToString)
     }
@@ -50,7 +58,7 @@ func grabInitialConstants() -> (initialConstants: String, restOfStringStartsWith
     for string in createStringArray() {
         switch string {
         case "a","e","i","o","u":
-            if moveStringToEnd != "" {
+            if moveStringToEnd != "" && restOfStringStartsWith == "" {
                 restOfStringStartsWith += string
                 break
             }
@@ -60,7 +68,7 @@ func grabInitialConstants() -> (initialConstants: String, restOfStringStartsWith
             } else {
             }
         default:
-            println("other char")
+            println("\(string)")
         }
     }
     
@@ -88,12 +96,41 @@ func splitWordAtIndex() -> (Int) {
     return index
 }
 
+// Function 3: Better version
 
-if !firstStringIsAVowel() {
-stringArray[splitWordAtIndex()]
+func findStringIndex(array: [String], valueToFind: String) -> Int? {
+    for (index, value) in enumerate(array) {
+        if value == valueToFind {
+            return index
+        }
+    }
+    return nil
 }
 
-// Test Split Words at Index
+findStringIndex(createStringArray(), grabInitialConstants().restOfStringStartsWith)!
+
+splitWordAtIndex()
+createStringArray()
+
+
+
+// Assemble Words
+if firstStringIsAVowel() {
+    println("true")
+    var addAyToEnd = "ay"
+    var finalString = testword + addAyToEnd
+} else {
+    grabInitialConstants().initialConstants
+    splitWordAtIndex()
+    
+    
+    
+}
+
+
+createStringArray()
+
+
 
 //
 //createStringArray()

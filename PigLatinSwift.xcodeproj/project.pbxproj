@@ -37,6 +37,7 @@
 		272274B41A69CE73002B1161 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		272274B51A69CE73002B1161 /* PigLatinSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PigLatinSwiftTests.swift; sourceTree = "<group>"; };
 		272274BF1A69CE8E002B1161 /* PigLatin.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = PigLatin.playground; path = ../PigLatin.playground; sourceTree = "<group>"; };
+		275BA16C1A69E26D0065F331 /* ScratchPad.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ScratchPad.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +61,7 @@
 		272274911A69CE73002B1161 = {
 			isa = PBXGroup;
 			children = (
+				275BA16C1A69E26D0065F331 /* ScratchPad.playground */,
 				2722749C1A69CE73002B1161 /* PigLatinSwift */,
 				272274B21A69CE73002B1161 /* PigLatinSwiftTests */,
 				2722749B1A69CE73002B1161 /* Products */,
@@ -407,6 +409,7 @@
 				272274BB1A69CE73002B1161 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		272274BC1A69CE73002B1161 /* Build configuration list for PBXNativeTarget "PigLatinSwiftTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +418,7 @@
 				272274BE1A69CE73002B1161 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
