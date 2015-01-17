@@ -16,7 +16,7 @@ var originalString = "First Second Third"
 
 func createArrayOfWords (string: String) -> [String] {
     
-    var arrayOfWords = split(originalString) {$0 == " "}
+    var arrayOfWords = split(string) {$0 == " "}
     arrayOfWords.count
     var newWordArray = [String]()
     for word in arrayOfWords {
@@ -149,14 +149,6 @@ func transformWord(word: String) -> String {
 }
 
 
-var arrayOfWords = createArrayOfWords(originalString)
-
-for word in arrayOfWords {
-    var newWord = transformWord(word)
-    println("\(newWord)")
-}
-
-
 func transformWordsInArray (array: [String]) -> String {
     var transformedWordsArray = [String]()
     for word in array {
@@ -170,17 +162,22 @@ func transformWordsInArray (array: [String]) -> String {
     return finalString
 }
 
-transformWordsInArray(arrayOfWords)
-
 
 // MARK: FINAL String Class Extension Assemble Pig Latin Word
 
 extension String {
     func stringByPigLatinization () -> String {
-       
-        return  transformWord(self)
+        var array = createArrayOfWords(self)
+
+        return  transformWordsInArray(array)
     }
 }
+
+// MARK: TEST CASES - see it working for single words and strings with multiple words
+
+var string = "Kale Chips"
+string.stringByPigLatinization()
+
 
 transformWord.stringByPigLatinization()
 
@@ -188,7 +185,9 @@ var randomstring = "random string"
 
 randomstring.stringByPigLatinization()
 
-//testword.substringWithRange(<#aRange: Range<String.Index>#>)
+var superString = "What about this very long string?"
+
+superString.stringByPigLatinization()
 
 
 
