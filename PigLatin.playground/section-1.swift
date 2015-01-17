@@ -7,7 +7,7 @@ extension String {
     }
 }
 
-var testword: String = "start"
+var testword: String = "eeeebg"
 var stringArray = [String]()
 var tempIndex = 0
 
@@ -34,7 +34,6 @@ createStringArray()
 func firstStringIsAVowel() -> Bool {
     switch createStringArray()[0] {
     case "a","e","i","o","u":
-        println(stringArray[0])
         return true
     default:
         return false
@@ -56,7 +55,6 @@ func grabInitialConstants() -> (initialConstants: String, restOfStringStartsWith
                 break
             }
         case "b","c","d","f","g","h","j","k","l","m","n","p","q","r","s","t","u","v","w","x","y","z":
-            println("test")
             if restOfStringStartsWith == "" {
                 moveStringToEnd += string
             } else {
@@ -73,22 +71,30 @@ if !firstStringIsAVowel() {
     grabInitialConstants()
 }
 
-
-
+let firstStringOfRest = grabInitialConstants().restOfStringStartsWith
 
 
 // Function 3: find Index where word should be split
 
 func splitWordAtIndex() -> (Int) {
     var index = 0
-    for string in stringArray {
-        if string != grabInitialConstants().restOfStringStartsWith {
-            index += 1
+    for string in createStringArray() {
+        if string == grabInitialConstants().restOfStringStartsWith {
+                break
         }
+        index += 1
     }
     index
     return index
 }
+
+
+if !firstStringIsAVowel() {
+stringArray[splitWordAtIndex()]
+}
+
+// Test Split Words at Index
+
 //
 //createStringArray()
 //firstStringIsAVowel()
