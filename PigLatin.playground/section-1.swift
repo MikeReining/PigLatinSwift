@@ -6,14 +6,12 @@
 
 import Foundation
 
+// MARK: INPUT STRING
+
 var testword: String = "Kale"
 
-var lowercaseString = testword.lowercaseString
 
-
-// Create Array from String
-
-// MARK: Functions
+// MARK: Pig Latination Functions
 
 // STEP 1
 
@@ -138,49 +136,34 @@ func buildEndOfNewWord(#initialConstantsCount: Int, stringArray: [String]) -> St
 }
 
 
-// MARK: FINAL Function - Assemble Pig Latin Word
+// MARK: FINAL String Class Extension Assemble Pig Latin Word
 
 extension String {
-    func stringByPigLatinization () {
+    func stringByPigLatinization () -> String {
+        if firstStringIsAVowel() {
+            println("true")
+            var addAyToEnd = "ay"
+            var finalString = testword + addAyToEnd
+            return finalString
+            
+        } else {
+            let initialConstants = grabInitialConstants().initialConstants
+            let index = findStringIndex(createStringArray(), grabInitialConstants().restOfStringStartsWith)
+            let array = createOriginalStringArray()
+            let newWordStartsWith = buildStartOfNewWord(startAtIndex: index!, myArrayCount: array.count, array: array)
+            let initialConstantsCount = countElementsOfInitialConstancts(initialConstants)
+            let endOfNewWord = buildEndOfNewWord(initialConstantsCount: initialConstantsCount, createOriginalStringArray())
+            
+            return newWordStartsWith + endOfNewWord + "ay"
+        }
+
     }
 }
 
-if firstStringIsAVowel() {
-    println("true")
-    var addAyToEnd = "ay"
-    var finalString = testword + addAyToEnd
-} else {
-    let initialConstants = grabInitialConstants().initialConstants
-    let index = findStringIndex(createStringArray(), grabInitialConstants().restOfStringStartsWith)
-    let array = createOriginalStringArray()
-    let newWordStartsWith = buildStartOfNewWord(startAtIndex: index!, myArrayCount: array.count, array: array)
-    let initialConstantsCount = countElementsOfInitialConstancts(initialConstants)
-    let endOfNewWord = buildEndOfNewWord(initialConstantsCount: initialConstantsCount, createOriginalStringArray())
-    
-    let finalWord = newWordStartsWith + endOfNewWord + "ay"
-
-
-}
-
+testword.stringByPigLatinization()
 
 createStringArray()
 
-
-
-//
-//createStringArray()
-//firstStringIsAVowel()
-//if !firstStringIsAVowel() {
-//    // Call Function 2
-//    grabInitialConstants()
-//    // Call Function 3
-//    splitWordAtIndex()
-//    
-//    // Assemble word
-////    testword.substringWithRange(splitWordAtIndex())
-//    
-//}
-//
 
 //testword.substringWithRange(<#aRange: Range<String.Index>#>)
 
