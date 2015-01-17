@@ -112,7 +112,17 @@ findStringIndex(createStringArray(), grabInitialConstants().restOfStringStartsWi
 splitWordAtIndex()
 createStringArray()
 
+func buildWord(startAtIndex: Int, myArrayCount: Int, array: [String]) -> String {
+    var newWord: String = ""
+    var endOfIndex = array.count - 1
+    for index in startAtIndex...endOfIndex {
+        println("\(array[index])")
+        newWord = newWord + array[index]
+    }
+    return newWord
+}
 
+buildWord(splitWordAtIndex(), createStringArray().count, createStringArray())
 
 // Assemble Words
 if firstStringIsAVowel() {
@@ -122,8 +132,8 @@ if firstStringIsAVowel() {
 } else {
     grabInitialConstants().initialConstants
     splitWordAtIndex()
-    
-    
+//    buildWord(splitWordAtIndex(), createStringArray().count, createStringArray())
+
     
 }
 

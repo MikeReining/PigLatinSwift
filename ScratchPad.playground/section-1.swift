@@ -21,12 +21,13 @@ findStringIndex(myArray, "b")!
 
 func buildWord(startAtIndex: Int, myArrayCount: Int, array: [String]) -> String {
     var newWord: String = ""
-    for index in startAtIndex...myArrayCount {
+    var endOfIndex = array.count - 1
+    for index in startAtIndex...endOfIndex {
         println("\(array[index])")
         newWord = newWord + array[index]
         }
     return newWord
 }
 
-buildWord(2, 3, myArray)
+buildWord(2, myArray.count, myArray)
 
